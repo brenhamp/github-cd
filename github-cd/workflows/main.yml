@@ -1,0 +1,17 @@
+ name: Deploy
+
+    on:
+      push:
+        branches:
+          - main
+
+    jobs:
+      build:
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v2
+          - uses: akhileshns/heroku-deploy@v3.12.11
+            with:
+              heroku_api_key: ${{e504589c-0395-4089-9f85-60733a025a41}}
+              heroku_app_name: "ancient-oasis-37832"
+              heroku_email: "brenhampozzi@yahoo.com"
